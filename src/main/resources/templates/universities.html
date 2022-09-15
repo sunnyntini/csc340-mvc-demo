@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head> 
+        <title>Universities</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <h1 style="text-align:center;">University List</h1>
+        
+        <div style="align-content: center;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Domain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="university : ${universities}">
+                        <td th:text="${university.name}"></td>
+                        <td th:text=" ${university.country}"></td>
+                        <td th:text=" ${university.domain}"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

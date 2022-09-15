@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head> 
+        <title>Greeting</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <h1 style="text-align:center;">Greeting</h1>
+        <p th:text="${greeting.message} +', '+ ${greeting.recipient} + '!'" />
+        <div style="align-content: center;">
+            <table class="table" style="border:1px solid black;">
+                <thead>
+                    <tr>
+                        <th>Message</th>
+                        <th>Recipient</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td th:text="${greeting.message}"></td>
+                        <td th:text=" ${greeting.recipient}"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>
